@@ -1,4 +1,6 @@
 {
+  // Don't want to assemble your own set of plugins? No problem! 
+  // Presets can act as an array of Babel plugins or even a sharable options config.
   "presets": [
     [
       // @babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). 
