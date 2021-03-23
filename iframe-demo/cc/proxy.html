@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>proxy</title>
+</head>
+<body>
+    proxy
+    <script type="text/javascript">
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURIComponent(r[2]);
+            }
+            return undefined;
+        }
+        var API = {
+            closePopupCertifyCallback : function(data){
+                document.domain = 'me.com';
+                parent.parent.closePopupCertifyCallback(data);
+            }
+        };
+		window.onload = function () {
+            window.API = API;
+            try{
+                var content = getQueryString('data');
+                if(!content){
+                    return 
+                }
+                eval(content);
+            }catch(e){
+                alert(e.message)
+            }
+        }
+	</script>
+</body>
+</html>

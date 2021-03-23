@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iframe test</title>
+    <link rel="stylesheet" href="//ptlogin.3304399.net/resource/css/init.css" type="text/css"/>
+    <link rel="stylesheet" href="//ptlogin.3304399.net/resource/style.css" type="text/css"/>
+    <link rel="stylesheet" href="//ptlogin.3304399.net/resource/css/base.css" type="text/css"/>
+    <script type="text/javascript" src="https://ptlogin.3304399.net/resource/ucenter.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="banner">
+            <div id="bannerU"></div>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div id="rec1"></div>
+        <div id="rec2"></div>
+        <div class="rec3"></div>
+    </div>
+    <div class="box">
+        <div class="banner">
+            <a href="/test/index.do">index</a>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        uloginProp = {};
+        uloginProp.divId = "bannerU";
+        uloginProp.bizId = "1199000205";
+        uloginProp.appId = "test";
+        uloginProp.gameId = "game1";
+        uloginProp.level = 105;
+        uloginProp.regLevel = 100;
+        uloginProp.loginDomain = "4399.com";
+        //uloginProp.loginLevel = 10;
+        uloginProp.externalLogin = "qq";//不支持qq登录可以不设置
+        uloginProp.postLoginHandler = "refreshParent";//可以不设置，缺省值为"default"，登录完后直接用js修改登录div中的信息，不刷新页面；刷新父页面为"refreshParent"； 如果为"redirect"，需要设置redirectUrl属性
+        //uloginProp.css = "http://ptlogin.4399.com/resource/css/test/sheep.css";//可以不设置，缺省为空
+        
+        uloginProp.userNameLabel = "3387用户名";
+        uloginProp.userNameTip = "请填写中国";
+        uloginProp.welcomeTip = "欢迎回到中国";
+        
+        uloginProp.qrLogin = true;
+        
+        UniLogin.setUnionLoginProps(uloginProp);	
+        UniLogin.showPopupCertify();
+    </script>
+    <script type="text/javascript">
+		window.closePopupCertifyCallback = function (data) {
+            alert("关闭啦～" + data)
+        }
+	</script>
+</body>
+</html>
