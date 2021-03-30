@@ -23,17 +23,30 @@
                 parent.parent.closePopupCertifyCallback(data);
             }
         };
+        var content;
+        
+        
 		window.onload = function () {
             window.API = API;
-            try{
-                var content = getQueryString('data');
+    
+            // try{
+            //     content = getQueryString('data');
+            //     if(!content){
+            //         return 
+            //     }
+            //     eval(content);
+            // }catch(e){
+            //     alert(e.message)
+            // }
+
+            window.addEventListener("message", function(event){
+                alert("c")
+                content = event.data;
                 if(!content){
                     return 
                 }
                 eval(content);
-            }catch(e){
-                alert(e.message)
-            }
+            }, false);
         }
 	</script>
 </body>

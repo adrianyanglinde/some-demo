@@ -34,7 +34,7 @@
         uloginProp.bizId = "1199000205";
         uloginProp.appId = "test";
         uloginProp.gameId = "game1";
-        uloginProp.level = 105;
+        uloginProp.level = 100;
         uloginProp.regLevel = 100;
         uloginProp.loginDomain = "4399.com";
         //uloginProp.loginLevel = 10;
@@ -45,16 +45,28 @@
         uloginProp.userNameLabel = "3387用户名";
         uloginProp.userNameTip = "请填写中国";
         uloginProp.welcomeTip = "欢迎回到中国";
+        uloginProp.setPopupCertifyPass = function(){
+            console.log("setPopupCertifyPass");
+            return {
+                clickHandle : function(data){
+                    alert("自定义跳过");
+                    console.log("1",data);
+                },
+                text : "自定义跳过"
+            }
+        }
         
         uloginProp.qrLogin = true;
         
         UniLogin.setUnionLoginProps(uloginProp);	
+        unionLoginProps.__selfDomain = "4399.com";
         UniLogin.showPopupCertify();
     </script>
     <script type="text/javascript">
 		window.closePopupCertifyCallback = function (data) {
             alert("关闭啦～" + data)
         }
+        
 	</script>
 </body>
 </html>
