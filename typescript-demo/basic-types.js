@@ -11,13 +11,17 @@ var Color;
 (function (Color) {
     Color[Color["Red"] = 0] = "Red";
     Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
+    Color["Blue"] = "Blue";
 })(Color || (Color = {}));
 var c = Color.Red;
 var colorName = Color[2];
+console.log(c);
+console.log(colorName);
+console.log(Color.Blue);
 //any
 var notSure = "aa";
 notSure = 4;
+notSure.toFixed();
 //let prettySure: Object = 4;
 //void
 function warnUser() {
