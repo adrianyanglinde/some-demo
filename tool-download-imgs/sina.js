@@ -1,6 +1,6 @@
 const model = require("./model");
-const name = "超赞！韩国艺体女神孙妍在练功秀好身材";
-const url = "http://slide.sports.sina.com.cn/o/slide_2_730_261257.html#p=1";
+const name = "健身健康展现场瑜伽培训教练学员展超强身体柔韧性";
+const url = "http://slide.sports.sina.com.cn/o/slide_2_730_264324.html#p=2";
 const host = "n.sinaimg.cn";
 const depositPath = "/Users/adrianyoung/Downloads/sina/";
 
