@@ -1,7 +1,10 @@
+
+/**函数 */
 function myAdd1(x: number, y: number): number {
   return x + y;
 }
 
+/**函数表达式 */
 // 赋值语句的一边指定了类型但是另一边没有类型的话 TypeScript编译器会自动识别出类型 是一种类型推论
 let myAdd2 = function(x: number, y: number): number {
   return x + y;
