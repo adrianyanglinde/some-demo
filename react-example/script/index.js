@@ -7,7 +7,6 @@ webpack(config, (err, stats) => {
         console.error(err);
         return;
     }
-
     console.log(
         stats.toString({
             chunks: false,
