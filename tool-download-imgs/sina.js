@@ -1,6 +1,6 @@
 const model = require("./model");
-const name = "健身健康展现场瑜伽培训教练学员展超强身体柔韧性";
-const url = "http://slide.sports.sina.com.cn/o/slide_2_730_264324.html#p=2";
+const name = "广东辽宁球迷助威CBA总决赛哪家女球迷最亮眼";
+const url = "http://slide.sports.sina.com.cn/cba/slide_2_792_265990.html#p=3";
 const host = "n.sinaimg.cn";
 const depositPath = "/Users/adrianyoung/Downloads/sina/";
 

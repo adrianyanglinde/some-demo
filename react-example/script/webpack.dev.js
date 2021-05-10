@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common');
 const apiMocker = require('mocker-api');
 
+console.log(path.resolve(__dirname, '../dist'));
 module.exports = merge(common, {
     mode: 'development',
 
@@ -11,7 +12,7 @@ module.exports = merge(common, {
 
     //webpack-dev-server provides you with a simple web server and the ability to use live reloading
     devServer: {
-        contentBase: path.resolve(__dirname, '../dist'),
+        contentBase: path.resolve(__dirname, '/'),
         compress: true,
         host: 'localhost',
         port: 9007,
@@ -37,8 +38,8 @@ module.exports = merge(common, {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.js'
         //The publicPath will be used within our server script as well in order to make sure files are served correctly on http://localhost:3000.
-        publicPath: '/dist/' //TODO: packed url can replace by CDN
+        //publicPath: '/dist/' //TODO: packed url can replace by CDN
     }
 });
