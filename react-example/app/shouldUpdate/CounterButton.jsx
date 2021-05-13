@@ -1,7 +1,7 @@
 import React, { Component, PureComponent } from 'react';
 
 // PureComponent通过prop和state的浅比较来实现shouldComponentUpdate
-export class CounterButton extends PureComponent {
+export class CounterButton extends Component {
     constructor(props) {
         super(props);
         this.state = {

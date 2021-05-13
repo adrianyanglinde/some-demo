@@ -12,11 +12,13 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: 'module'
     },
-    plugins: ['react', 'prettier'],
+    plugins: ['react', 'prettier', 'react-hooks'],
     rules: {
         'prettier/prettier': 'error',
         'no-unused-vars': 'off',
-        'react/prop-types': 0
+        'react/prop-types': 0,
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn'
     },
     globals: {
         document: true,

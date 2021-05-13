@@ -4,8 +4,13 @@ import React, { Component, PureComponent } from 'react';
 
 function MyComponent(props) {
     console.log('MyComponent render');
-    return <div>{props.color}</div>;
+    return (
+        <>
+            <div>value:{props.color.name}</div>
+        </>
+    );
 }
+
 function areEqual(prevProps, nextProps) {
     /*
         如果把 nextProps 传入 render 方法的返回结果与
@@ -15,16 +20,21 @@ function areEqual(prevProps, nextProps) {
 }
 const MyComponentMemo = React.memo(MyComponent);
 
+let colorObj = {
+    name: 'blue'
+};
+
 export class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            color: 'blue'
+            color: colorObj
         };
     }
     handleClick() {
+        colorObj.name = 'red';
         this.setState((state) => ({
-            color: 'red'
+            color: colorObj
         }));
     }
     render() {
