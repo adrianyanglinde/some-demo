@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "braft-editor": "^2.3.9",
-    "immer": "^8.0.1",
+    "immer": "^9.0.6",
     "lodash": "^4.17.21",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
