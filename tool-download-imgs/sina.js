@@ -1,6 +1,6 @@
 const model = require("./model");
-const name = "广东辽宁球迷助威CBA总决赛哪家女球迷最亮眼";
-const url = "http://slide.sports.sina.com.cn/cba/slide_2_792_265990.html#p=3";
+const name = "美女记者Lisa";
+const url = "https://slide.sports.sina.com.cn/k/slide_2_786_268889.html#p=3";
 const host = "n.sinaimg.cn";
 const depositPath = "/Users/adrianyoung/Downloads/sina/";
 
